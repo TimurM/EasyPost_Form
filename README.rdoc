@@ -1,0 +1,16 @@
+# Print a Shipping Label using EasyPost API
+
+##Assignment
+Use the EasyPost API (https://www.easypost.com/) to implement a web page where a user
+
+can print a USPS Shipping Label in order to mail packages.
+
+<b>Inputs​:</b>
+
+● From Address and Destination Address
+
+● Package attributes such as weight and dimensions
+
+<b>Output​:</b>
+
+● A USPS Shipping Label suitable for printing.
