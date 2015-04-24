@@ -35,16 +35,23 @@ class ShippingLabelsController < ApplicationController
         }
       }
       )
-
+    begin
       @bought_shipment = @shipment.buy(
         :rate => @shipment.lowest_rate(carriers = ['USPS'], services = ['First'])
       )
 
-      if @bought_shipment
-        redirect_to @bought_shipment.postage_label.label_url
-      else
-        render json: @bought_shipment.errors.full_messages, status: :unprocessable_entity
-      end
+      redirect_to @bought_shipment.postage_label.label_url
+
+    rescue
+      flash[:errors] = ["Invalid information please enter this information again"]
+      redirect_to new_shipping_label_url
+    end
+
+      # if @bought_shipment
+      #   redirect_to @bought_shipment.postage_label.label_url
+      # else
+      #   render json: @bought_shipment.errors.full_messages, status: :unprocessable_entity
+      # end
     end
 
     def new
