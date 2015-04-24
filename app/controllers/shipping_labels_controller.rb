@@ -6,6 +6,7 @@ class ShippingLabelsController < ApplicationController
 
       to_address_inputs = params[:to_address]
       from_address_inputs = params[:from_address]
+      parcel_inputs = params[:parcel]
 
       @shipment = EasyPost::Shipment.create(
       {
@@ -27,10 +28,10 @@ class ShippingLabelsController < ApplicationController
           phone: from_address_inputs['phone']
         },
         parcel: {
-          length: 9,
-          width: 6,
-          height: 2,
-          weight: 10
+          length: parcel_inputs['length'],
+          width: parcel_inputs['width'],
+          height: parcel_inputs['height'],
+          weight: parcel_inputs['weight']
         }
       }
       )

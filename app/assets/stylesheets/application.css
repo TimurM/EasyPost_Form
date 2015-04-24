@@ -49,32 +49,31 @@
  }
 
  @media screen and (min-width: 0px) and (max-width: 400px) {
-   #myform { width: 100%; }  /* show it on small screens */
+   #myform { width: 100%;  margin: 20px 5px;}  /* show it on small screens */
  }
 
  @media screen and (min-width: 401px) and (max-width: 1024px) {
-   #myform { display: 300px; }   /* hide it elsewhere */
+   #myform { margin: 20px 60px;}   /* hide it elsewhere */
  }
 
  /*Form Styles*/
 
  #myform {
-   margin: 0 auto;
-   width: 850px;
+   margin: 20px 60px;
    padding: 30px 50px 0px 50px;
-   height: 100%;
+   max-width: 850px;
+   /*height: 100%;*/
    /*max-height: 420px;*/
    -webkit-box-shadow:0 3px 10px #888;
+   overflow: auto;
  }
 
 
  .form-container {
    float: left;
    position:relative;
-   /*width: 200px;*/
    display: block;
    margin: 10px;
-   /*margin-bottom: 15px;*/
  }
 
  .form-container  p {
@@ -88,29 +87,7 @@
    margin-top: 0px;
  }
 
- .inputs > label:last-child {
-   color: #D33725;
-   margin-top: 5px;
-   font-family: 'Open Sans', sans-serif;
-   font-size: .8rem;
-   font-weight: bold;
-   text-align: center;
-   line-height: 16px;
-   display: block;
- }
-
- #myform div > label:first-child {
-   text-align: center;
-   line-height: 20px;
-   font-weight: bold;
-   font-size: 1rem;
-   margin-bottom: 5px;
-   display: block;
-   color: #939393;
-   font-family: 'Open Sans', sans-serif;
- }
-
- #myform div input {
+ .form-container input {
    display: block;
    width: 100%;
    margin-left: 0px;
@@ -128,7 +105,7 @@
    font-family: 'Open Sans', sans-serif;
  }
 
- #myform div input:focus {
+ .form-container input:focus {
    border-bottom: 2px solid #7EBF38;
    text-align: center;
    outline: 0;
@@ -139,7 +116,7 @@
 
  #myform .button {
    clear: both;
-   margin: 20px auto 0px auto;
+   margin: 30px auto 30px auto;
    display: block;
    background-color: #7EBF38;
    padding: 10px 30px 10px 30px;
