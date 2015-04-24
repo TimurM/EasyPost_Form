@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :easy_posts, only: [:new, :create]
+  resources :shipping_labels, only: [:new, :create]
 end

@@ -1,0 +1,83 @@
+<nav>
+  <h1>Dot&Bo</h1>
+</nav>
+
+<form id="myform" class="mysign-in" action="<%= shipping_labels_url %>" method="post">
+  <input
+  type="hidden"
+  name="authenticity_token"
+  value="<%= form_authenticity_token %>">
+
+  <div class="form-container">
+    <p>To Address</p>
+    <div class="inputs">
+        <input type="text" name="to_address[name]" class="form-control" placeholder="name">
+    </div>
+
+    <div class="inputs">
+        <input type="text" name="to_address[company]" class="form-control" placeholder="company">
+    </div>
+    <div class="inputs">
+        <input type="text" name="to_address[street1]" class="form-control" placeholder="stree1">
+    </div>
+    <div class="inputs">
+        <input type="text" name="to_address[city]" class="form-control" placeholder="city">
+    </div>
+
+    <div class="inputs">
+        <input type="text" name="to_address[state]" class="form-control" placeholder="state">
+    </div>
+    <div class="inputs">
+        <input type="text" name="to_address[zip]" class="form-control" placeholder="zip">
+    </div>
+  </div>
+
+  <div class="form-container">
+    <p>From Address</p>
+    <div class="inputs">
+        <input type="text" name="from_address[company]" class="form-control" placeholder="company">
+    </div>
+
+    <div class="inputs">
+        <input type="text" name="from_address[stree1]" class="form-control" placeholder="stree1">
+    </div>
+    <div class="inputs">
+        <input type="text" name="from_address[street2]" class="form-control" placeholder="stree2">
+    </div>
+    <div class="inputs">
+        <input type="text" name="from_address[city]" class="form-control" placeholder="city">
+    </div>
+
+    <div class="inputs">
+        <input type="text" name="from_address[state]" class="form-control" placeholder="state">
+    </div>
+    <div class="inputs">
+        <input type="number" name="from_address[zip]" class="form-control" placeholder="zip">
+    </div>
+    <div class="inputs">
+        <input type="tel" name="from_address[phone]" class="form-control" placeholder="phone">
+    </div>
+  </div>
+
+  <div class="form-container">
+    <p>Parcel Dimentions</p>
+    <div class="inputs">
+        <input type="number" name="parcel[length]" class="form-control" placeholder="length">
+    </div>
+
+    <div class="inputs">
+        <input type="number" name="parcel[width]" class="form-control" placeholder="width">
+    </div>
+    <div class="inputs">
+        <input type="number" name="parcel[height]" class="form-control" placeholder="height">
+    </div>
+    <div class="inputs">
+        <input type="number" name="parcel[weight]" class="form-control" placeholder="weight">
+    </div>
+  </div>
+
+  <div class="inputs">
+      <button type="submit" class="button">Print Label</button>
+  </div>
+</form>
+</div>
